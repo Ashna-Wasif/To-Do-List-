@@ -1,0 +1,179 @@
+<input type="text" name="edittask" id="edittask" value=${task}>
+
+function add_data(){
+    //debugger;
+    let newRow = document.createElement('tr');
+    newRow.innerHTML+=
+    `<tr>
+        <td>${lastID}</td>
+        <td id="task" ><input type="text" name="input_task" id="input_task" placeholder='Task'></td>
+        <td id="Option"><select id="Select">Status
+            <option value="InProgress"> In progress</option>
+            <option value="Todo"> To Do</option>
+            <option value="Completed"> Completed</option>
+        </select></td>
+        <td><button class="fa-solid fa-pen-to-square" value="editbtn" name="editbtn" id="editbtn"></button></td>
+        <td><button class="fa-solid fa-check" value="donebtn" name="donebtn" id="donebtn"></button></td>
+        <td><button class="fa-solid fa-trash" value="removebtn" name="removebtn" id="removebtn"></button></td>
+    </tr>
+    <tr colspan column="3"><td><button value="add" name="add" id="add">Add Now</button></td></tr>`
+    lastID++;
+    table.append(newRow);
+    let add= document.getElementById('add');
+    add.addEventListener('click',()=> {
+       let task= document.getElementById('task');
+       let status= document.getElementById('Option');
+       task.innerText= document.getElementById('input_task').value;
+       status.innerText= document.getElementById('Select').value;
+       add.style.display='none';
+
+   // newRow.querySelector('#editbtn').addEventListener('click', ()=> edit_data(this));
+   newRow.querySelector('#editbtn').addEventListener('click',function() {
+    edit_data(this)});
+   newRow.querySelector('#donebtn').addEventListener('click', function() {
+     strikeOutData
+    (this)});
+    newRow.querySelector('#removebtn').addEventListener('click',function() {
+    remove_data(this)});
+    });
+}
+
+
+function(){strikeOutData(this)}
+
+
+// / addTask.addEventListener('click',()=>{});
+    // row.children[1].innerHTML = `<td></td>`;
+    // row.children[2].innerHTML = `<td id="OptionEdit"><select id="Select">
+    //         <option value="InProgress"> In progress</option>
+    //         <option value="Todo"> To Do</option>
+    //         <option value="Completed"> Completed</option>
+    //     </select></td>
+    //     <tr colspan column="3"><td><button value="edit" name="edit" id="edit">Edit Now</button></td></tr>`;
+    //     let edit= document.getElementById('edit');
+    //     edit.addEventListener('click',()=> {
+    //        let task= document.getElementById('edittask');//input element
+    //        let Task_val= document.getElementById('edittask').value;
+    //        let status= document.getElementById('OptionEdit');
+    //        let status_val= document.getElementById('Select').value;
+    //        row.children[1].innerHTML=`<td>${Task_val}</td>`;
+    //        row.children[2].innerHTML=`<td>${status_val}</td>`;
+    //        edit.style.display='none';})
+    
+
+
+
+// function edit_data(btn) {
+//   let row = btn.closest('tr');
+//   let task = row.children[1].innerText; // Get the task (2nd cell)
+//   let status = row.children[2].innerText; // Get the status (3rd cell)
+//   alert(`Task: ${task}, Status: ${status}`);
+// }
+
+
+
+
+ h1{
+    text-align: center;
+    color: rgba(40, 92, 125, 0.858);
+    font-size: 50px;
+}
+
+#btnadd
+{
+    /* position: absolute; */
+    height: 55px;
+    width: 70px;
+    /* bottom: 10px;
+    display: block;
+    margin: 0 auto; */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+}
+
+#Reset{
+    height: 55px;
+    width: 70px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+}
+
+table{
+    width: 60%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    margin: auto; 
+    margin-top: 50px;
+} 
+
+th{
+    border-bottom: 1px solid grey; 
+    font-size: 25px; 
+    color: rgba(75, 83, 88, 0.858); 
+}  
+tr,td{
+    font-size: 20px; 
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* background: url('v554-wan-57a-wreath.jpg') ;
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed;  */
+}
+
+/* #donebtn, #removebtn , #btnDelAll{
+    height: 40px;
+    width: 60px;
+} */
+
+#editbtn, #donebtn, #removebtn{
+    width:50px;
+    height:40px;
+    text-align: center;
+    text-decoration: none;
+     font-size: 18px;
+     color: rgba(75, 83, 88, 0.858);
+  border: 1px solid rgba(40, 92, 125, 0.858);;
+     transition: .5s;
+}
+
+#editbtn:hover, #donebtn:hover, #removebtn:hover{
+     background:rgba(40, 92, 125, 0.858);
+}
+/* body{
+    background-image: url("3.jpg");
+    background-position: right;
+} */
+/* div { 
+  display: flex;
+  justify-content: center;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+table, th{
+    text-align: center;
+    border-bottom: 1px solid grey; 
+   
+} */

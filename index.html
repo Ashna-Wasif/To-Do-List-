@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Items</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+    <h1>To Do Tasks</h1>
+
+    <div class="container">
+    <button value="btnadd" class="fa-solid" name="btnadd" id="btnadd">Add A New Task</button>
+    <button value="Reset" class="fa-solid" style="display: none;" name="Reset" id="Reset">Reset</button>
+
+    <div class="input-container">
+<input type="text" name="input_task" id="input_task" placeholder='Task' style="display: none;">
+<select style="display: none;" id="Status">
+           <option value="InProgress"> In progress</option>
+           <option value="Todo"> To Do</option>
+           <option value="Completed"> Completed</option>
+       </select>
+<button value="editTask" class="fa-solid" name="editTask" id="editTask" style="display: none;">Edit Task</button>
+<button value="addTask" class="fa-solid" name="addTask" id="addTask" style="display: none;">Add Task</button>
+</div>
+</div>
+
+    <div class="contianer" >
+    <table class="main_tbl" style="display: none;" >
+        <tr id="tableHeader">
+            <!-- <th>ID</th> -->
+            <th>Tasks</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Done</th>
+            <th>Remove</th>
+        </tr>
+    </table>
+</div>
+
+<script src="working.js"></script>
+<script src="https://kit.fontawesome.com/77c637df25.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

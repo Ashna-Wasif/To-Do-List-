@@ -1,0 +1,127 @@
+h1 {
+    text-align: center;
+    color: rgba(40, 92, 125, 0.858);
+    font-size: 50px;
+}
+
+#addTask,#btnadd{
+    height: 60px;
+    width: 150px;
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: rgba(40, 92, 125, 0.858);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: background-color 0.3s ease;
+}
+#addTask:hover ,#btnadd:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.2);
+}
+
+
+#btnDelAll,
+#editTask,
+#Reset {
+    height: 55px;
+    width: 70px;
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: rgba(40, 92, 125, 0.858);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#btnDelAll:hover,
+#editTask:hover,
+#Reset:hover {
+    background-color: rgba(149, 158, 164, 0.858);
+}
+
+input[type="text"],
+select {
+    height: 40px;
+    width: 250px;
+    margin: 10px auto;
+    display: block;
+    padding: 5px;
+    border: 1px solid rgba(40, 92, 125, 0.858);
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: 60%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    margin: auto;
+    margin-top: 50px;
+}
+
+th {
+    border-bottom: 1px solid grey;
+    font-size: 25px;
+    color: rgba(75, 83, 88, 0.858);
+}
+
+tr,
+td {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+#donebtn:not(:disabled),
+#removebtn,
+#editbtn,
+#btnDelAll {
+    height: 40px;
+    width: 60px;
+    background-color: rgba(40, 92, 125, 0.858);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+#donebtn:not(:disabled):hover,
+#removebtn:hover,
+#editbtn:hover,
+#btnDelAll:hover {
+    background-color: rgba(132, 139, 144, 0.858);
+}
+
+#donebtn:disabled{
+    height: 40px;
+    width: 60px;
+    background-color: rgba(132, 139, 144, 0.858);
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+#Reset {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
